@@ -12,7 +12,7 @@ const Login = () => {
   // console.log(email,password);
 const logsub= async()=>{
 
-  const res=await axios.post('/api/login',data)
+  const res=await axios.post('https://xxxdash.herokuapp.com/api/login',data)
 
   try{
     console.log(res.data.status);

@@ -22,7 +22,7 @@ const UpdateProduct = () => {
       console.log(nid);
       let uid=nid[nid.length-1]
      console.log('id is '+ uid);
-     const uprodu=await axios.patch(`/api/upproducts/${uid}`,data);
+     const uprodu=await axios.patch(`https://xxxdash.herokuapp.com/api/upproducts/${uid}`,data);
      console.log(uprodu.data);
     
     }
@@ -34,7 +34,7 @@ const UpdateProduct = () => {
      console.log(nid);
      let uid=nid[nid.length-1]
     console.log(uid);
-      const updtt=await axios.get(`/api/products/${uid}`);
+      const updtt=await axios.get(`https://xxxdash.herokuapp.com/api/products/${uid}`);
       console.log(updtt.data);
      setData({
       name:updtt.data.name,

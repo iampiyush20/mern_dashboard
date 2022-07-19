@@ -12,7 +12,7 @@ company:''
     
      alert('added');
    
-      const res=await axios.post('/api/addproduct',data);
+      const res=await axios.post('https://xxxdash.herokuapp.com/api/addproduct',data);
       try{
         console.log(res.data);
       }catch(e){
