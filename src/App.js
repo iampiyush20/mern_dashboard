@@ -1,8 +1,8 @@
-import React,{useEffect} from 'react'
+import React,{useEffect} from 'react';
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import Nav from './Components/Nav';
-import Footer from './Components/Footer'
+import Footer from './Components/Footer';
 import SignUp from './Components/SignUp';
 import Login from './Components/Login';
 import Addproduct from './Components/Addproduct';

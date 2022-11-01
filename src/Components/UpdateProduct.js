@@ -1,9 +1,11 @@
 import React,{useEffect, useState} from 'react'
 import {useParams} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios'
 import { get } from 'jquery';
 // import { set } from 'mongoose';
 const UpdateProduct = () => {
+  const navigate=useNavigate();
   let { userId } = useParams();
   // console.log(userId);
     const [data,setData]=useState({
@@ -22,9 +24,9 @@ const UpdateProduct = () => {
       console.log(nid);
       let uid=nid[nid.length-1]
      console.log('id is '+ uid);
-     const uprodu=await axios.patch(`https://xxxdash.herokuapp.com/api/upproducts/${uid}`,data);
+     const uprodu=await axios.patch(`https://tame-shoulder-pads-ant.cyclic.app/api/upproducts/${uid}`,data);
      console.log(uprodu.data);
-    
+     navigate('/home')
     }
     const getp=async(id)=>{
       
@@ -34,7 +36,7 @@ const UpdateProduct = () => {
      console.log(nid);
      let uid=nid[nid.length-1]
     console.log(uid);
-      const updtt=await axios.get(`https://xxxdash.herokuapp.com/api/products/${uid}`);
+      const updtt=await axios.get(`https://tame-shoulder-pads-ant.cyclic.app/api/products/${uid}`);
       console.log(updtt.data);
      setData({
       name:updtt.data.name,

@@ -12,7 +12,7 @@ const Login = () => {
   // console.log(email,password);
 const logsub= async()=>{
 
-  const res=await axios.post('https://xxxdash.herokuapp.com/api/login',data)
+  const res=await axios.post('https://tame-shoulder-pads-ant.cyclic.app/api/login',data)
 
   try{
     console.log(res.data.status);

@@ -1,6 +1,8 @@
 import React,{useState,useEffect} from 'react'
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 const Addproduct = () => {
+  const navigate=useNavigate();
   const [data,setData]=useState({
 name:'',
 price:"",
@@ -12,9 +14,10 @@ company:''
     
      alert('added');
    
-      const res=await axios.post('https://xxxdash.herokuapp.com/api/addproduct',data);
+      const res=await axios.post('https://tame-shoulder-pads-ant.cyclic.app/api/addproduct',data);
       try{
         console.log(res.data);
+        navigate('/home')
       }catch(e){
         console.log(e);
       }

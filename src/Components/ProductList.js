@@ -9,7 +9,7 @@ const ProductList = () => {
   const navigate=useNavigate();
 const [products,setproducts]=useState([]);
 const getpro=async()=>{
-    const showpro=await axios.get('https://xxxdash.herokuapp.com/api/products');
+    const showpro=await axios.get('https://tame-shoulder-pads-ant.cyclic.app/api/products');
 
     setproducts(showpro.data);
 }
@@ -21,14 +21,14 @@ console.log(products);
 
 const deleteproduct=async(id)=>{
 console.log(id);
-const dele=await axios.delete(`https://xxxdash.herokuapp.com/api/products/${id}`);
+const dele=await axios.delete(`https://tame-shoulder-pads-ant.cyclic.app/api/products/${id}`);
 if(dele){
     getpro();
 }
 }
 const updateprooduct=async(id)=>{
 
-    const updtt=await axios.get(`https://xxxdash.herokuapp.com/api/products/${id}`);
+    const updtt=await axios.get(`https://tame-shoulder-pads-ant.cyclic.app/api/products/${id}`);
     // console.log(updtt.data);
     navigate(`/update/${id}`);
 //  document.getElementById('dataname').value=updtt.data.name;

@@ -41,7 +41,7 @@ const SignUp = () => {
   const summm=async(e)=>{
     e.preventDefault();
     console.log(data)
-   const regis=await axios.post('https://xxxdash.herokuapp.com/api/register',data);
+   const regis=await axios.post('https://tame-shoulder-pads-ant.cyclic.app/api/register',data);
    try{
    if(regis.data.status==='already exist'){
     alert('data exits')
